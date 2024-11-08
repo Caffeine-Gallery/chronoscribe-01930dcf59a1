@@ -1,0 +1,11 @@
+type TimerId = nat;
+service : {
+  cancelTimer: (TimerId) -> ();
+  getRandomPrompt: () -> (text);
+  getWritings: () -> (vec record {
+                            text;
+                            text;
+                          }) query;
+  saveWriting: (text, text) -> ();
+  startTimer: () -> (TimerId);
+}
